@@ -8,10 +8,11 @@ namespace HelpingMOHeroes.Web.Models
     public class Event
     {
         public int Id { get; set; }
-        public string Location { get; set; }
+        public int LocationId { get; set; }
         public int NumSlots { get; set; }
         public DateTime EventDate { get; set; }
 
         public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public virtual Location Location { get; set; }
     }
 }
